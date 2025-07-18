@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dhanshri Gund | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #121212;
+      --text: #ffffff;
+      --accent: #00ffe1;
+      --card-bg: #1e1e1e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+
+    .name {
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--accent);
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    .typing {
+      font-size: 1.5rem;
+      color: var(--text);
+      margin-top: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid var(--accent);
+      width: 0;
+      animation: typing 3s steps(25) 1s forwards, blink 0.7s infinite step-end alternate;
+    }
+
+    nav {
+      margin-top: 2rem;
+    }
+
+    nav a {
+      color: var(--accent);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 1s ease;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .projects, .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .project, .skill {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      flex: 1 1 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover, .skill:hover {
+      transform: translateY(-10px);
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: #aaa;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      font-size: 1rem;
+    }
+
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 25ch; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    @media (max-width: 768px) {
+      .projects, .skills {
+        flex-direction: column;
+      }
+
+      .name {
+        font-size: 2rem;
+      }
+
+      .typing {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body onload="showGreeting()">
+
+  <!-- Header -->
+  <header>
+    <div class="name">Hi, I’m Dhanshri</div>
+    <div class="typing">I am a Web Developer</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am Dhanshri Gund, a passionate and creative web developer with a strong interest in building clean, user-friendly, and responsive websites. I specialize in front-end development using HTML, CSS, and JavaScript, and I enjoy bringing designs to life through smooth interactions and modern layouts.
+
+I take pride in writing efficient and readable code, and I'm always eager to learn new tools and technologies. Currently, I’m exploring frameworks like React and expanding my knowledge toward full-stack development.
+
+My goal is to grow as a developer and contribute to projects that create real value for users. Whether it’s a small personal website or a large-scale application, I approach every project with curiosity, dedication, and a desire to make it better..</p>
+    <p>I work with HTML, CSS, JavaScript, and I’m learning frameworks like React. I enjoy turning ideas into interactive web experiences.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>🌐 Portfolio Website</h3>
+        <p>I built this portfolio using HTML, CSS, and JavaScript. It includes animations, dark mode, and responsive layout.</p>
+      </div>
+      <div class="project">
+        <h3>✅ To-Do App</h3>
+        <p>A simple task tracker built with vanilla JavaScript. It allows adding, deleting, and storing tasks locally.</p>
+      </div>
+      <div class="project">
+        <h3>☁ calculator</h3>
+        <p>A simple calculator to calculate values.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">💡 HTML5</div>
+      <div class="skill">🎨 CSS3</div>
+      <div class="skill">⚙ JavaScript</div>
+      <div class="skill">⚛ React Basics</div>
+      <div class="skill">🔧 Git & GitHub</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:dhanshrigund26@gmail.com">dhanshrigund26@gmail.com</a></p>
+    <p>🔗 LinkedIn: 
+      <a href="https://www.linkedin.com/in/dhanshri-gund-090b51330" target="_blank">
+        linkedin.com/in/dhanshri-gund
+      </a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>✨ Designed by Dhanshri Gund | &copy; 2025 ✨</p>
+  </footer>
+
+  <!-- JS Typing Welcome -->
+  <script>
+    function showGreeting() {
+      console.log("Welcome to Dhanshri's portfolio!");
+    }
+  </script>
+</body>
+</html>
